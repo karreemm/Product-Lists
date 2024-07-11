@@ -3,6 +3,9 @@
     margin: 0;
     font-family: monospace;
 }
+html{
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
 body{
     display: flex;
     flex-direction: column;
@@ -10,22 +13,27 @@ body{
     min-height: 90vh;
     width: 100%;
     text-align: center;
-    background-color: #e3e3e3;
     color: #080808;
     padding: 10px 0;
 }
 .container{
     margin: 0 auto;
-    width: 96%;
+    width: 90%;
     max-width: 800px;
 }
 .table{
+    margin-top: 2rem;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;   
 }
 .item.header{
-    background-color: #0c0cb2;
+    background-color:#FF204E ;
     color: #f7f7f7;
+    border: 2px solid white;
+    
 }
 .item.header p{
     font-weight: bold;
@@ -35,66 +43,161 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     text-align: left;
-    border: 1px solid #08080833;
+    border: 2px solid white;
     margin: 6px 0px;
-    background-color: #e3e3e3;
+    
 }
 .item p{
     padding: 8px 2px;
     width: 100%;
     font-size: 18px;
     text-align: center;
-    border: 1px solid #08080833;
+    border: 1px solid white;
+    color: white;
 }
 .item .delete{
-    background-color: #b90c0c;
-    color: #e3e3e3;
+    color: white;
     font-size: 20px;
     cursor: pointer;
     transition-duration: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 .item .delete:hover{
     opacity: 0.8;
 }
+
+
 form{
     height: 40px;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
 form *{
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #08080833;
+    border: 2px solid white;
     padding: 2px 4px;
     font-size: 16px
 }
 form input[type="text"], form input[type="number"]{
     outline: none;
-    background-color: #e3e3e3;
+    background-color: #FF204E;
+    padding: 0.5rem;
+    color: white;
 }
-form input[type="submit"]{
-    font-weight: bold;
-    background-color: #0cb90c;
-    color: #e3e3e3;
-    font-size: 19px;
-    letter-spacing: 0.6px;
-    cursor: pointer;
-    transition-duration: 0.3s;
+form input[type="text"]::placeholder, form input[type="number"]::placeholder{
+    color: white;
 }
-form input[type="submit"]:hover{
-    opacity: 0.8;
-}
+
 .text{
     padding: 10px;
     font-size: 18px;
-    border: 2px solid #08080833;
+    border: 2px solid white;
+    color: white;
+}
+
+.total-price{
+    font-size: 18px;
+    font-weight: bold;
+
 }
 
 .quantity-items{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
+}
+
+h1{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.text2{
+    font-size: 20px;
+}
+
+.total{
+    margin-top: 3rem;
+}
+
+.icon{
+    height: 1.3rem;
+    width: auto;
+}
+
+.icon2{
+    height: 1.6rem;
+}
+.icon3{
+    height: 2rem;
+    width: auto;
+    border: none !important;
+}
+
+.icon-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+.quantity-btn{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    border: none;
+    background-color: inherit;
+}
+.quantity-btn:hover{
+    opacity: 0.8;
+}
+
+h2{
+    color: white;
+    font-size: 25px;
+    margin-top: 1rem;
+}
+
+.add-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.add-btn{
+    background-color: #FF204E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 19px;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    gap: 0.5rem;
+}
+.add-btn:hover{
+    opacity: 0.8;
+}
+
+.heade-text{
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px){
+    .header-text{
+        display: none;
+    }
 }

@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import "../../App.css"
+import AddIcon from "../images/addcart.png"
 
 class addItem extends Component {
     state = {
@@ -24,13 +26,19 @@ class addItem extends Component {
 
     render(){
         return(
-            <div className="item">
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" value={this.state.product} placeholder="Enter Product" id="product" onChange={this.handleChange} required/>
-                    <input type="number" value={this.state.price} placeholder="Enter Price" id="price" onChange={this.handleChange} required/>
-                    <input type="submit" value="Add"/>
-                </form>
+            <>
+            <div className='add-item'>
+                <h2>Add New Product</h2>
+                <div className="item">
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" value={this.state.product} placeholder="Name" id="product" onChange={this.handleChange} required/>
+                        <input type="number" value={this.state.price} placeholder="Price" id="price" onChange={this.handleChange} required/>
+                        <button type="submit" className='add-btn'><img src={AddIcon} className='icon3'></img>Add</button>
+                    </form>
+                </div>
             </div>
+            </>
+
         )
     }
 }

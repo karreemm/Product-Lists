@@ -11,7 +11,7 @@ class App extends Component {
       {id:2, product:'Book', price:10, quantity: 1},
       {id:3, product:'Laptop', price:40000, quantity: 1},
       {id:4, product:'Mobile', price:20000, quantity: 1},
-      {id:5, product:'Headphone', price:2000, quantity: 1}
+      {id:5, product:'PS', price:2000, quantity: 1}
 
     ]
   }
@@ -59,7 +59,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Product List React App</h1>
+        <h1>Product List</h1>
         <div className="table">
           <Items items={this.state.items} del={this.deleteItem} increaseQuantity={this.increaseQuantity} decreaseQuantity={this.decreaseQuantity} />
           <AddItem add={this.addItem}/>

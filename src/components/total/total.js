@@ -7,8 +7,8 @@ const Total = (props) => {
         total += parseFloat(items[i].price) * items[i].quantity;
     }
     return (
-        <div>
-            <p className="text">Total Price: {total}</p>
+        <div className='total'>
+            <p className="text">Total Price: <span className='total-price'>{total}</span> EGP</p>
         </div>
     )
 }
